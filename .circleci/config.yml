@@ -1,12 +1,12 @@
 version: 2
 jobs:
   build:
+    context: Prod
     docker:
       - image: debian:stretch
     steps:
       - checkout
       - run:
-          context: Prod
           name: Greeting
           command: echo $CREDENTIALS.
       - run:
