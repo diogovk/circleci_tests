@@ -6,6 +6,7 @@ jobs:
     steps:
       - checkout
       - run:
+          context: Prod
           name: Greeting
           command: echo $CREDENTIALS.
       - run:
